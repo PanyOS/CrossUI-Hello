@@ -37,7 +37,8 @@ xui.Class('App', 'xui.Module',{
                         ],
                         "method" : "pop",
                         "event" : 1
-                    }
+                    },
+                    "_xui_ui_htmlbutton3_onclick"
                 ])
             );
             
@@ -49,7 +50,17 @@ xui.Class('App', 'xui.Module',{
         customAppend : function(parent, subId, left, top){
             // "return false" will cause all the internal UI controls will be added to the parent panel
             return false;
-        }
+        },
+/**
+         * Fired when user click it
+         * @method onClick [xui.UI.HTMLButton event]
+         * @param {xui.UIProfile.} profile  The current control's profile object
+         * @param {Event} e , Dom event object
+         * @param {Element.xui} src  id or Dom Element
+        */
+_xui_ui_htmlbutton3_onclick:function(profile, e, src){
+    var ns = this, uictrl = profile.boxing();
+}
         /*,
         // To determine how properties affects this module
         propSetAction : function(prop){
